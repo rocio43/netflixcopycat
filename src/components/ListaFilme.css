@@ -1,0 +1,55 @@
+.ListaFilme{
+    margin-bottom: 30px;
+}
+.ListaFilme h2{
+    margin: 0px 0px 0px 30px;
+}
+.ListaFilme--listarea{
+    overflow-x: hidden;
+    padding-left: 30px;
+}
+.ListaFilme--list{
+    transition: all ease 0.5s;
+}
+.ListaFilme--item{
+    display: inline-block;
+    width: 150px;
+    cursor: pointer;
+}
+.ListaFilme--item img{
+    width: 100%;
+    transform: scale(0.9);
+    transition: all ease 0.2s;
+}
+.ListaFilme--item img:hover {
+    transform: scale(1);
+}
+.ListaFilme--left, .ListaFilme--right{
+    position: absolute;
+    width: 40px;
+    height: 225px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.5s;
+}
+.ListaFilme--left{
+    left:0;
+}
+.ListaFilme--right{
+    right:0;
+}
+.ListaFilme:hover .ListaFilme--right, .ListaFilme:hover .ListaFilme--left{
+    opacity: 1;
+}
+
+@media (max-width: 760px){
+    .ListaFilme--left, .ListaFilme--right{
+        opacity: 1;
+    }
+}
